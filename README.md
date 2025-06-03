@@ -15,7 +15,9 @@ Julia Leite - RM550201
 ## 🌨️ Descrição do problema
 
 Atualmente, a população de diversos países precisa lidar constantemente com as quedas de energia em detrimento de fortes chuvas, falto de preparo, entre outros motivos. De acordo com o portal G1 (2025), apenas em 2024 foram feitos 5,7 milhões de chamados relativos à falta de luz no Brasil, além de o tempo de resposta para atendimentos de situações de emergência ter deteriorado.
+
 Por consequência do ritmo acelerado e dependente das fontes energéticas em que vivemos, muitas pessoas precisam da energia para necessidades essenciais, como trabalhar ou estudar, sem contar os que precisam dela para, de fato, sobreviver, como no caso de pessoas que utilizam aparelhos hospitalares.
+
 Em suma, a falta de energia é um problema que atinge diversos cidadãos em diversas escalas, e por isso, é necessário que a tecnologia possa ajudar na prevenção, solução ou auxílio nessas ocasiões.
 
 ---
@@ -24,15 +26,31 @@ Em suma, a falta de energia é um problema que atinge diversos cidadãos em dive
 
 Portanto, nossa solução consiste em uma aplicação baseada em visão computacional, capaz de identificar pessoas em perigo em locais enfrentando quedas de energia. O sistema emite sinais visuais e sonoros, como luzes ou alarmes, para auxiliar na orientação do indivíduo, além de registrar logs com data e hora dos eventos detectados. Essas informações podem ser acessadas por equipes especializadas, permitindo o envio de assistência física de forma mais rápida e eficiente.
 
----
+### 🌨️ Requisitos
 
-## 🌨️ Requisitos
+Antes de executar o programa, se certifique de ter instalado os pacotes Python a seguir:
 
-Criando um novo terminal, digite:
-
-```
+```bash
 pip install mediapipe opencv-python numpy pillow
 ```
+
+### 🌨️ Como usar a aplicação
+
+1. **Execute o programa principal**
+Diretamente pela sua IDE de preferência, rode o arquivo `main.py`, ou abra o terminar, navegue até a pasta onde ele se encontra e execute:
+
+```bash
+   python main.py
+```
+
+2. **Inicie a detecção**
+A interface gráfica será exibida com um botão, clique para ativar a câmera (ou o vídeo) e iniciar o monitoramento de gestos.
+
+Ao levantar os dois braços, o sistema interpretará como uma situação de emergência, e as seguintes ações serão executadas:
+- Um som de alerta será emitido, a fim de guiar o indivíduo pelo som
+- Uma janela branca será aberta, simulando uma fonte de luz 
+- Um registro com data e hora será salvo no arquivo logs.txt
+
 
 ---
 
