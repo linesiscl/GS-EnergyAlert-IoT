@@ -37,6 +37,7 @@ pip install mediapipe opencv-python numpy pillow
 ### 🌨️ Como usar a aplicação
 
 1. **Execute o programa principal**
+
 Diretamente pela sua IDE de preferência, rode o arquivo `main.py`, ou abra o terminar, navegue até a pasta onde ele se encontra e execute:
 
 ```bash
@@ -44,6 +45,7 @@ Diretamente pela sua IDE de preferência, rode o arquivo `main.py`, ou abra o te
 ```
 
 2. **Inicie a detecção**
+
 A interface gráfica será exibida com um botão, clique para ativar a câmera (ou o vídeo) e iniciar o monitoramento de gestos.
 
 Ao levantar os dois braços, o sistema interpretará como uma situação de emergência, e as seguintes ações serão executadas:
