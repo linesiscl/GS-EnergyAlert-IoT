@@ -48,19 +48,19 @@ class App:
             threading.Thread(target=self.video_loop).start()
 
     def video_loop(self):
-        self.cap = cv2.VideoCapture("videos/cenario_simulado.mp4")
+        self.cap = cv2.VideoCapture("videos/teste2.mp4")
 
         while self.running and self.cap.isOpened():
             ret, frame = self.cap.read()
             if not ret:
                 break
 
-            frame = cv2.flip(frame, 1)
+            frame = cv2.flip(frame, 0)
             gesture_detected = self.detector.detect_raised_arms(frame)
 
             if gesture_detected:
-                self.alert_system.trigger_alert()
-                cv2.putText(frame, "⚠️ Gesto Detectado!", (30, 50),
+                self.alert_system.alerta()
+                cv2.putText(frame, "Gesto Detectado!", (30, 50),
                             cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
             else:
                 cv2.putText(frame, "Aguardando gesto...", (30, 50),

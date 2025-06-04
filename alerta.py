@@ -17,7 +17,7 @@ class AlertaEmergencia:
         self.log_file = log_file
         self.alert_triggered = False
 
-    def trigger_alert(self):
+    def alerta(self):
         if self.alert_triggered:
             return  # evita alertas duplicados
 
@@ -26,14 +26,14 @@ class AlertaEmergencia:
         self._log_event(timestamp)
 
         # Executar os alertas em paralelo
-        threading.Thread(target=self._play_sound).start()
-        threading.Thread(target=self._show_white_screen).start()
+        threading.Thread(target=self._som).start()
+        threading.Thread(target=self._abrir_janela).start()
 
         # Esperar um tempo antes de permitir novo alerta
         threading.Timer(10.0, self._reset_alert).start()
 
     #Essa função é para tocar o som
-    def _play_sound(self):
+    def _som(self):
         if winsound:
             # Windows
             winsound.Beep(1000, 500)  # frequência, duração (ms)
@@ -42,17 +42,15 @@ class AlertaEmergencia:
             os.system('play -nq -t alsa synth 0.3 sine 1000')  # requer sox instalado
 
     #Essa função vai abrir uma janela em branco para simular uma lanterna
-    def _show_white_screen(self):
-        white_image = 255 * np.ones((500, 800, 3), dtype=np.uint8)
-        cv2.namedWindow("EMERGENCY LIGHT", cv2.WND_PROP_FULLSCREEN)
-        cv2.setWindowProperty("EMERGENCY LIGHT", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
-        cv2.imshow("EMERGENCY LIGHT", white_image)
+    def _abrir_janela(self):
+        tela_branca = 255 * np.ones((500, 800, 3), dtype=np.uint8)
+        cv2.imshow("EMERGENCY LIGHT", tela_branca)
         cv2.waitKey(3000)
         cv2.destroyWindow("EMERGENCY LIGHT")
 
     def _log_event(self, timestamp):
         with open(self.log_file, "a") as f:
-            f.write(f"[{timestamp}] Alerta acionado por gesto de dois braços levantados\n")
+            f.write(f"[{timestamp}] Alerta acionado por gesto de dois bracos levantados\n")
 
     def _reset_alert(self):
         self.alert_triggered = False

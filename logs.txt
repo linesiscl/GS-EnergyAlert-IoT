@@ -1,0 +1,8 @@
+[2025-06-04 19:10:11] Alerta acionado por gesto de dois braços levantados
+[2025-06-04 19:10:21] Alerta acionado por gesto de dois braços levantados
+[2025-06-04 19:10:31] Alerta acionado por gesto de dois braços levantados
+[2025-06-04 19:12:19] Alerta acionado por gesto de dois braços levantados
+[2025-06-04 19:16:17] Alerta acionado por gesto de dois bracos levantados
+[2025-06-04 19:16:36] Alerta acionado por gesto de dois bracos levantados
+[2025-06-04 19:17:42] Alerta acionado por gesto de dois bracos levantados
+[2025-06-04 19:22:55] Alerta acionado por gesto de dois bracos levantados
