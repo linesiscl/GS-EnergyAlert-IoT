@@ -48,18 +48,18 @@ Diretamente pela sua IDE de preferência, rode o arquivo `main.py`, ou abra o te
 
 A interface gráfica será exibida com um botão, clique para ativar a câmera (ou o vídeo) e iniciar o monitoramento de gestos.
 
-![inicio](image.png)
+![inicio](images/image.png)
 
 Ao levantar os dois braços, o sistema interpretará como uma situação de emergência, e as seguintes ações serão executadas:
 - Um som de alerta será emitido, a fim de guiar o indivíduo pelo som
 - Uma janela branca será aberta, simulando uma fonte de luz 
 - Um registro com data e hora será salvo no arquivo logs.txt
 
-![gesto detectado](image-1.png)
+![gesto detectado](images/image-1.png)
 
 Para encerrar a detecção, clique no outro botão. E para fechar a aplicação, apenas clique no "X" para fechar a tela.
 
-![encerrar](image-2.png)
+![encerrar](images/image-2.png)
 
 
 > **Observação:** Para testar a aplicação com vídeo próprios, trocar o nome e localização do arquivo em `main.py`!
