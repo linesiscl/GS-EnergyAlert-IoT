@@ -68,7 +68,7 @@ Para encerrar a detecção, clique no outro botão. E para fechar a aplicação,
 
 ## 🌨️ Link do vídeo demonstrativo
 
-Para acessar um vídeo demonstrativo e explicativo sobre o projeto [clique aqui]()!
+Para acessar um vídeo demonstrativo e explicativo sobre o projeto [clique aqui](https://youtu.be/7RTQY_OyWLw)!
 
 ---
 
